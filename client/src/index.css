@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warna Kiru berdasarkan tabel desain terbaru */
+  --color-kiru-primary: #6A5BC2;
+  --color-kiru-secondary: #E8E4F8;
+  --color-kiru-text-main: #4A4A4A;
+  --color-kiru-online: #4CAF50;
+  --color-kiru-offline: #FF9800;
+  --color-kiru-background: #F5F7FA;
+
+  /* State Colors */
+  --color-kiru-primary-hover: #5849AD;
+
+  /* Radius sesuai desain box */
+  --radius-kiru: 1rem;
+}
+
+/* Base Styles */
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-kiru-background);
+  color: var(--color-kiru-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}

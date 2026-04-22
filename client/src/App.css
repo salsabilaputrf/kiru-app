@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warna utama Kiru dari desain kamu */
+  --color-kiru-primary: #6D5DD3;
+  --color-kiru-hover: #5B4DB8;
+  --color-kiru-background: #F3F4F6;
+  --color-kiru-online: #22C55E;
+  
+  /* Radius untuk box login */
+  --radius-kiru: 1.25rem;
+}
+
+/* Optional: Reset font agar lebih bersih */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--color-kiru-background);
+}
+
