@@ -39,6 +39,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /var/www/kiru-app/server
+            /usr/bin/npm install
+            /usr/bin/pm2 restart all
             git pull origin main
             cd server
             npm install --production
