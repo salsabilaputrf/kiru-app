@@ -5,7 +5,7 @@ import {
 } from '@ant-design/icons';
 
 export const getSidebarItems = (navigate) => [
-    { key: '1', icon: <DashboardOutlined />, label: 'Dashboard', onClick: () => navigate('/') },
+    { key: '1', icon: <DashboardOutlined />, label: 'Dashboard', onClick: () => navigate('/kiru-app') },
     { key: '2', icon: <ShopOutlined />, label: 'Point of Sale (POS)', onClick: () => navigate('/pos') },
     { key: '3', icon: <DatabaseOutlined />, label: 'Inventory Stok', onClick: () => navigate('/inventory') },
     { key: '4', icon: <UsergroupAddOutlined />, label: 'User Management', onClick: () => navigate('/users') },

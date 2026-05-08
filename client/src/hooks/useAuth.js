@@ -15,7 +15,7 @@ export const useAuth = () => {
             
             if (result?.data?.accessToken) {
                 message.success('Login berhasil! Selamat datang.');
-                navigate('/');
+                navigate('/kiru-app');
                 return result;
             } else {
                 throw new Error("Gagal mendapatkan kunci akses dari server");
