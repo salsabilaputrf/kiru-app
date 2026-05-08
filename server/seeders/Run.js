@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { AppDataSource }  from '../configs/Db.js';
-import { hashPassword }   from '../utils/Hash.js';
+import { hashPassword }   from '../utils/hash.js';
 
 // Entities 
 import { Branch }        from '../models/entities/BranchEntity.js';

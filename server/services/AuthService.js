@@ -1,5 +1,5 @@
 import { FindUserForAuthDomain, UpdateLastLoginDomain } from '../domains/AuthDomain.js';
-import { comparePassword } from '../utils/Hash.js';
+import { comparePassword } from '../utils/hash.js';
 import { generateTokenPair } from '../utils/jwt.js'; 
 import { LoginSchema } from '../models/schemas/AuthSchema.js';
 import { CustomError } from '../middleware/ErrorHandler.js'

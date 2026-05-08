@@ -3,7 +3,7 @@ import { AppDataSource } from '../configs/Db.js';
 import { User } from '../models/entities/UserEntity.js';
 import { Role } from '../models/entities/RoleEntity.js';     // Pastikan Entity ini ada
 import { Branch } from '../models/entities/BranchEntity.js'; // Pastikan Entity ini ada
-import { hashPassword } from '../utils/Hash.js';
+import { hashPassword } from '../utils/hash.js';
 
 const seedDatabase = async () => {
 	console.log('\n--- Starting Full Seeder ---\n');

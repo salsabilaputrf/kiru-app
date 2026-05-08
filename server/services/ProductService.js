@@ -3,7 +3,7 @@ import * as productDomain from "../domains/ProductDomain.js";
 import { DeleteStockByProductDomain } from '../domains/StockDomain.js'
 import { ProductListResponse } from "../models/responses/ProductResponse.js";
 import { ProductSchema } from "../models/schemas/ProductSchema.js"
-import { getPagination, paginationMeta } from "../utils/Pagination.js";
+import { getPagination, paginationMeta } from "../utils/pagination.js";
 import {CustomError} from "../middleware/ErrorHandler.js";
 
 export async function GetAllProductsService(query){

@@ -1,5 +1,5 @@
-import { hashPassword } from '../utils/Hash.js';
-import { getPagination, paginationMeta } from '../utils/Pagination.js';
+import { hashPassword } from '../utils/hash.js';
+import { getPagination, paginationMeta } from '../utils/pagination.js';
 import * as userDomain from '../domains/UserDomain.js';
 import { CreateUserSchema, UpdateUserSchema, ChangePasswordSchema } from '../models/schemas/UserSchema.js';
 import { AppDataSource } from '../configs/Db.js';
@@ -7,7 +7,7 @@ import { FindRoleByNameDomain } from '../domains/RoleDomain.js';
 import { FindBranchByNameDomain } from '../domains/BranchDomain.js'
 import { CustomError } from '../middleware/ErrorHandler.js';
 import { UserListResponse } from '../models/responses/UserResponse.js';
-import { comparePassword } from '../utils/Hash.js';
+import { comparePassword } from '../utils/hash.js';
 import { FindUserForAuthDomain } from '../domains/AuthDomain.js';
 
 export async function CreateUserService(payload){
