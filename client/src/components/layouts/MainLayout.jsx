@@ -47,7 +47,7 @@ export default function MainLayout({ children, title }) {
                 }}
             >
                 <div className="p-6 h-24 flex items-center justify-center">
-                    <Link to="/kiru-app" className="flex items-center gap-3">
+                    <Link to="/" className="flex items-center gap-3">
                         <img 
                             src={logoKiru} 
                             alt="Logo Kiru" 

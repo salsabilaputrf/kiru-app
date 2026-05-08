@@ -41,12 +41,11 @@ export const useMainLayout = () => {
     }, []);
 
     const getSelectedKey = () => {
-        const path = location.pathname;
-        if (path.startsWith('/kiru-app')) return '1';
+        const path = location.pathname;  
         if (path.startsWith('/pos')) return '2';
         if (path.startsWith('/inventory')) return '3';
         if (path.startsWith('/users')) return '4';
-        
+        if (path.startsWith('/')) return '1';
         return '1';
     };
 
