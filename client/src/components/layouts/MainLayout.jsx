@@ -11,6 +11,7 @@ import { motion } from 'framer-motion';
 import { ModalProfile } from '../Modal';
 import { useMainLayout } from '@/hooks/useMainLayout';
 import { getAvatarItems, getSidebarItems } from '@/configs/menuConfig';
+import { useProfile } from "@/hooks/useProfile";
 
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
@@ -23,7 +24,7 @@ export default function MainLayout({ children, title }) {
         handleLogout, siderWidth, navigate, userData
     } = useMainLayout();
 
-    const sidebarItems = getSidebarItems(navigate);
+    const sidebarItems = getSidebarItems(navigate, userData?.role);
     const avatarItems = getAvatarItems(() => setIsProfileOpen(true), handleLogout);
 
     return (
