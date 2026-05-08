@@ -36,7 +36,7 @@ export default function App() {
 					}
 				}}
 			>
-				<Router>
+				<Router basename="/kiru-app">
 					<main className="antialiased">
 						<Routes>
 							<Route 
