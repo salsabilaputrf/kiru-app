@@ -38,10 +38,10 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /var/www/kiru-app/server
-            /usr/bin/npm install
-            /usr/bin/pm2 restart all
+            cd /var/www/kiru-app      
             git pull origin main
             cd server
+            npm install
+            pm2 restart all
             npm install --production
             pm2 restart kiru-server || pm2 start index.js --name kiru-server
