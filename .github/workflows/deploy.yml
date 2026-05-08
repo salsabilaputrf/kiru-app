@@ -1,0 +1,45 @@
+name: Deploy Kiru App
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build frontend
+        working-directory: ./client
+        run: |
+          npm install
+          npm run build
+
+      - name: Kirim build frontend ke VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "client/dist/*"
+          target: "/var/www/kiru-app/client"
+          strip_components: 2
+
+      - name: Update backend & restart PM2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /var/www/kiru-app
+            git pull origin main
+            cd server
+            npm install --production
+            pm2 restart kiru-server || pm2 start index.js --name kiru-server
