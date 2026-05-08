@@ -38,7 +38,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /var/www/kiru-app
+            cd /var/www/kiru-app/server
             git pull origin main
             cd server
             npm install --production
