@@ -1,4 +1,4 @@
-import { AppDataSource } from '../configs/db.js';
+import { AppDataSource } from '../configs/Db.js';
 
 const getQueryBuilder = (manager, viewName, alias) => {
     const connection = manager ? manager : AppDataSource;

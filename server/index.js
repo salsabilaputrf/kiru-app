@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import mainRoutes from './routes/MainRoutes.js';
 import { rateLimiter } from './middleware/RateLimiter.js';
-import { AppDataSource } from "./configs/db.js";
+import { AppDataSource } from "./configs/Db.js";
 
 const app = express();
 const PORT = parseInt(process.env.APP_PORT);

@@ -1,4 +1,4 @@
-import { AppDataSource }              from '../configs/db.js';
+import { AppDataSource }              from '../configs/Db.js';
 import { CustomError }        from '../middleware/ErrorHandler.js';
 import { getPagination, paginationMeta } from '../utils/pagination.js';
 import { CreateTransactionSchema }    from '../models/schemas/TransactionSchema.js';

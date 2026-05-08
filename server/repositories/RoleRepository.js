@@ -1,4 +1,4 @@
-import { AppDataSource } from '../configs/db.js';
+import { AppDataSource } from '../configs/Db.js';
 import { Role } from '../models/entities/RoleEntity.js';
 
 const getRepo = (manager) => (manager ? manager.getRepository(Role) : AppDataSource.getRepository(Role));

@@ -1,4 +1,4 @@
-import { AppDataSource } from '../configs/db.js';
+import { AppDataSource } from '../configs/Db.js';
 import { Category } from '../models/entities/CategoryEntity.js';
 
 const getRepo = (manager) => (manager ? manager.getRepository(Category) : AppDataSource.getRepository(Category));

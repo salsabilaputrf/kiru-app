@@ -1,4 +1,4 @@
-import { AppDataSource }   from '../configs/db.js';
+import { AppDataSource }   from '../configs/Db.js';
 import { Transaction }     from '../models/entities/TransactionEntity.js';
 import { TransactionItem } from '../models/entities/TransactionItemEntity.js';
 

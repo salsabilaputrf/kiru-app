@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { AppDataSource }  from '../configs/db.js';
+import { AppDataSource }  from '../configs/Db.js';
 import { hashPassword }   from '../utils/Hash.js';
 
 // Entities 

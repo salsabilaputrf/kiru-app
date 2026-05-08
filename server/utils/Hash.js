@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs';
-import { bcryptConfig } from '../configs/app.js';
+import { bcryptConfig } from '../configs/App.js';
  
 export const hashPassword = async (plainPassword) => {
   return await bcrypt.hash(plainPassword, bcryptConfig.saltRounds);

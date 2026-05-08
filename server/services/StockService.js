@@ -1,5 +1,5 @@
-import { AppDataSource } from '../configs/db.js';
-import { AddStockSchema } from '../models/Schemas/StockSchema.js';
+import { AppDataSource } from '../configs/Db.js';
+import { AddStockSchema } from '../models/schemas/StockSchema.js';
 import { CustomError } from '../middleware/ErrorHandler.js';
 import { FindProductByIdDomain } from '../domains/ProductDomain.js';
 import { FindStockByProductAndBranchDomain, UpsertStockDomain } from '../domains/StockDomain.js';

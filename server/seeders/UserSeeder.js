@@ -1,5 +1,5 @@
 import 'dotenv/config'; 
-import { AppDataSource } from '../configs/db.js';
+import { AppDataSource } from '../configs/Db.js';
 import { User } from '../models/entities/UserEntity.js';
 import { Role } from '../models/entities/RoleEntity.js';     // Pastikan Entity ini ada
 import { Branch } from '../models/entities/BranchEntity.js'; // Pastikan Entity ini ada

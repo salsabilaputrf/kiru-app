@@ -1,7 +1,7 @@
 import { FindUserForAuthDomain, UpdateLastLoginDomain } from '../domains/AuthDomain.js';
 import { comparePassword } from '../utils/Hash.js';
 import { generateTokenPair } from '../utils/jwt.js'; 
-import { LoginSchema } from '../models/Schemas/AuthSchema.js';
+import { LoginSchema } from '../models/schemas/AuthSchema.js';
 import { CustomError } from '../middleware/ErrorHandler.js'
 
 export async function LoginService(payload) {

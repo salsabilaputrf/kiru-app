@@ -1,4 +1,4 @@
-import { AppDataSource } from '../configs/db.js';
+import { AppDataSource } from '../configs/Db.js';
 import { Product } from '../models/entities/ProductEntity.js';
 import { ProductUnit } from '../models/entities/ProductUnitEntity.js';
 

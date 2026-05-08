@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { fileURLToPath } from 'url';
-import { AppDataSource } from '../configs/db.js';
+import { AppDataSource } from '../configs/Db.js';
 import { Category }       from '../models/entities/CategoryEntity.js';
 import { Product }         from '../models/entities/ProductEntity.js';
 import { ProductUnit } from '../models/entities/ProductUnitEntity.js';

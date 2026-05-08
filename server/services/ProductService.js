@@ -1,8 +1,8 @@
-import { AppDataSource } from '../configs/db.js';
+import { AppDataSource } from '../configs/Db.js';
 import * as productDomain from "../domains/ProductDomain.js";
 import { DeleteStockByProductDomain } from '../domains/StockDomain.js'
 import { ProductListResponse } from "../models/responses/ProductResponse.js";
-import { ProductSchema } from "../models/Schemas/ProductSchema.js"
+import { ProductSchema } from "../models/schemas/ProductSchema.js"
 import { getPagination, paginationMeta } from "../utils/Pagination.js";
 import {CustomError} from "../middleware/ErrorHandler.js";
 

@@ -1,8 +1,8 @@
 import { hashPassword } from '../utils/Hash.js';
 import { getPagination, paginationMeta } from '../utils/Pagination.js';
 import * as userDomain from '../domains/UserDomain.js';
-import { CreateUserSchema, UpdateUserSchema, ChangePasswordSchema } from '../models/Schemas/UserSchema.js';
-import { AppDataSource } from '../configs/db.js';
+import { CreateUserSchema, UpdateUserSchema, ChangePasswordSchema } from '../models/schemas/UserSchema.js';
+import { AppDataSource } from '../configs/Db.js';
 import { FindRoleByNameDomain } from '../domains/RoleDomain.js';
 import { FindBranchByNameDomain } from '../domains/BranchDomain.js'
 import { CustomError } from '../middleware/ErrorHandler.js';
