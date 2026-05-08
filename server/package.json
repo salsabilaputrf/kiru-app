@@ -2,10 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.mjs",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.mjs"
+    "dev": "nodemon index.js",
+
+    "seed:all": "node seeders/Run.js",
+    "swagger": "node configs/swagger.js"
   },
   "keywords": [],
   "author": "",
@@ -13,8 +16,19 @@
   "type": "module",
   "dependencies": {
     "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "joi": "^18.1.2",
     "jsonwebtoken": "^9.0.3",
-    "nodemon": "^3.1.14"
+    "mysql2": "^3.22.2",
+    "nodemon": "^3.1.14",
+    "reflect-metadata": "^0.2.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "typeorm": "^0.3.28"
+  },
+  "devDependencies": {
+    "swagger-autogen": "^2.23.7"
   }
 }

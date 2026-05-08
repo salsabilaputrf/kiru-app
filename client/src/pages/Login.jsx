@@ -1,24 +1,27 @@
-import React from 'react';
-import { Form, Input, Button, Typography, Card } from 'antd';
-import { Link } from "react-router-dom";
-import AuthLayout from "@/layouts/AuthLayout"; // Menggunakan alias @
+import React, { useState } from 'react';
+import { Form, Input, Button, Typography, Card, App as AntdApp } from 'antd';
+import { Link, useNavigate } from "react-router-dom";
+import AuthLayout from "@/components/layouts/AuthLayout"; // Menggunakan alias @
 import logoKiru from "@/assets/kiru_logo_only.svg";
+import api from "@/services/api";
+import { useAuth } from "@/hooks/useAuth";
 
 const { Text } = Typography;
 
 export default function Login() {
     const [form] = Form.useForm();
 
-    const onFinish = (values) => {
-        console.log('Success:', values);
+    const { handleLogin, loading } = useAuth();
+
+    const onFinish = async (values) => {
+        await handleLogin(values.username, values.password);
     };
 
     return (
         <AuthLayout>
             <div className="w-full max-w-[450px] mx-auto px-4 sm:px-0">
-                {/* Header Section: Stack vertikal di HP, Horizontal di Tablet ke atas */}
+                {/* Header */}
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
-                    {/* Logo Section */}
                     <Link to="/" className="flex items-center gap-3">
                         <img 
                             src={logoKiru} 
@@ -36,7 +39,6 @@ export default function Login() {
                         </div>
                     </Link>
                     
-                    {/* Status Online: Sembunyi di HP sangat kecil jika perlu, atau tetap tampil */}
                     <div className="group flex items-center gap-2 bg-green-50 px-4 py-1.5 rounded-full border border-kiru-online/20 transition-all duration-300 hover:bg-kiru-online">
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-kiru-online opacity-75"></span>
@@ -48,10 +50,10 @@ export default function Login() {
                     </div>
                 </div>
 
-                {/* Form Section */}
+                {/* Form */}
                 <Card 
                     className="border-gray-50 rounded-3xl shadow-xl shadow-purple-500/5"
-                    styles={{ body: { padding: 'clamp(1.5rem, 5vw, 2.5rem)' } }} // Padding dinamis
+                    styles={{ body: { padding: 'clamp(1.5rem, 5vw, 2.5rem)' } }} 
                 >
                     <Form
                         form={form}
@@ -65,7 +67,7 @@ export default function Login() {
                             name="username"
                             rules={[{ required: true, message: 'Silahkan masukkan username!' }]}
                         >
-                            <Input size="large" placeholder="Masukkan Username" className="rounded-xl h-12" />
+                            <Input size="large" placeholder="Masukkan Username" className="rounded-xl h-12" disabled={loading} />
                         </Form.Item>
 
                         <Form.Item
@@ -73,11 +75,12 @@ export default function Login() {
                             name="password"
                             rules={[{ required: true, message: 'Silahkan masukkan password!' }]}
                         >
-                            <Input.Password size="large" placeholder="Masukkan Password" className="rounded-xl h-12" />
+                            <Input.Password size="large" placeholder="Masukkan Password" className="rounded-xl h-12" disabled={loading} />
                         </Form.Item>
 
                         <Form.Item className="mb-2 mt-8">
                             <Button 
+                                loading={loading}
                                 type="primary" 
                                 htmlType="submit" 
                                 block 
@@ -88,15 +91,6 @@ export default function Login() {
                             </Button>
                         </Form.Item>
                     </Form>
-
-                    <div className="text-center sm:text-left mt-5 mb-1">
-                        <Link 
-                            to="/forgot-password" 
-                            className="text-xs font-semibold text-purple-400 hover:text-kiru-primary transition-all duration-300 hover:underline underline-offset-4"
-                        >
-                            Lupa Password?
-                        </Link>
-                    </div>
                 </Card>
             </div>
         </AuthLayout>
