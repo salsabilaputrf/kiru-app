@@ -40,7 +40,7 @@ export default function App() {
 					<main className="antialiased">
 						<Routes>
 							<Route 
-							path="/dashboard" 
+							path="/" 
 							element={
 								<ProtectedRoute>
 									<Dashboard />

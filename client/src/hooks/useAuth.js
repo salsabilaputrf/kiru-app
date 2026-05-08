@@ -15,7 +15,7 @@ export const useAuth = () => {
             
             if (result?.data?.accessToken) {
                 message.success('Login berhasil! Selamat datang.');
-                navigate('/dashboard');
+                navigate('/');
                 return result;
             } else {
                 throw new Error("Gagal mendapatkan kunci akses dari server");

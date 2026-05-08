@@ -42,10 +42,10 @@ export const useMainLayout = () => {
 
     const getSelectedKey = () => {
         const path = location.pathname;
-        if (path.startsWith('/dashboard')) return '1';
         if (path.startsWith('/pos')) return '2';
         if (path.startsWith('/inventory')) return '3';
         if (path.startsWith('/users')) return '4';
+        if (path.startsWith('/')) return '1';
         return '1';
     };
 
