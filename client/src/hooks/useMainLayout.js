@@ -54,7 +54,7 @@ export const useMainLayout = () => {
             authService.logout();
             message.success('Berhasil keluar');
             setTimeout(() => {
-                window.location.href = '/login';
+                window.location.href = '/kiru-app/login';
             }, 500);
         });
     };
