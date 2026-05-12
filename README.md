@@ -112,10 +112,7 @@ npm run dev
  
 ### 2a. Import Database
  
-```bash
-# Buat database dulu
-mysql -u root -p -e "CREATE DATABASE kiru_app;"
- 
+```bash 
 # Import file .sql
 mysql -u root -p kiru_app < server/database.sql
 ```
