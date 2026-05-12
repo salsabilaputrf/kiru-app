@@ -172,7 +172,7 @@ Authorization: Bearer <token>
  
 ![Schema Database Kiru App](./schema-kiru.png)
  
-*Gambar di atas menunjukkan hubungan antara tabel User, Role, Product, hingga Transaction yang mendukung fitur Multi-Branch dan Offline-First.*
+*Gambar di atas menunjukkan hubungan antara tabel*
  
 ---
 
