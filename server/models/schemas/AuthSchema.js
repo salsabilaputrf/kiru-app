@@ -4,7 +4,6 @@ export const LoginSchema = Joi.object({
     username: Joi.string()
         .min(3)
         .max(30)
-        .alphanum() 
         .required()
         .messages({
             'string.base': 'Username harus berupa teks',
